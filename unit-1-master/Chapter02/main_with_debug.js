@@ -17,13 +17,25 @@ var cityPop = [
 	}
 ];
 
+//create the table element
+    var table = document.createElement("table");
+
+    //create a header row
+    var row = document.createElement("tr");
+
+    //add the "City" , "Population" and City Size columns to the header row
+    row.insertAdjacentHTML("beforeend","<th>City</th><th>Population</th><th>City Size</th>")
+
+    //add the row to the table
+    table.appendChild(row);
+	console.log("Hello World");
 function addColumns(cityPop){
     
     document.querySelectorAll("tr").forEach(function(row, i){
 
     	if (i == 0){
 
-    		row.insertAdjacntHTML('beforeend', '<th>City Size</th>');
+    		row.insertAdjacentHTML('beforeend', '<th>City Size</th>');
     	} else {
 
     		var citySize;
@@ -32,13 +44,13 @@ function addColumns(cityPop){
     			citySize = 'Small';
 
     		} else if (cityPop[i-1].population < 500000){
-    			citysize = 'Medium';
+    			citySize = 'Medium';
 
     		} else {
     			citySize = 'Large';
     		};
 
-			row.insertAdjacntHTML = '<td' + citySize + '</td>';
+			row.insertAdjacentHTML = '<td>' + citySize + '</td>';
     	};
     });
 };
