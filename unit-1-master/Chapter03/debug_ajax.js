@@ -15,3 +15,11 @@ function debugAjax(){
 };
 
 document.querySelector("#mydiv").insertAdjacentHTML('beforeend', 'GeoJSON data: ' + JSON.stringify(myData))
+
+
+
+
+
+
+
+
